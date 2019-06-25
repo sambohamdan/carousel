@@ -1,0 +1,78 @@
+// Function to convert to rem for better positioning
+@function remy($value, $base: 16px) {
+  @return ($value / $base) * 1rem;
+}
+
+/* Animation for a simple fading effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Base unit */
+html {
+  font-size: remy(16px);
+}
+
+body {
+  padding-top: remy(16px);
+  font-family: "Montserrat", arial, sans-serif;
+
+  .slider-container {
+    padding: remy(26px);
+    justify-content: center;
+    max-width: remy(380px);
+    margin-left: 2rem;
+    .slider-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: remy(250px);
+      padding: 0;
+      margin: 0;
+
+      .active {
+        animation: fadeIn 0.85s ease-in-out;
+        display: inherit;
+      }
+      .hidden {
+        display: none !important;
+      }
+      .slider-slide {
+        display: flex;
+        flex-direction: row;
+        .picture {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .autor {
+    font-family: "Mali", cursive;
+    margin-top: remy(70px);
+    display: inline-block;
+  }
+}
+.slider-controlls {
+  .controlls-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    .prev,
+    .next {
+      text-decoration: none;
+      color: black;
+      &:hover{
+        color: tomato;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,111 @@
+/* Animation for a simple fading effect */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Base unit */
+html {
+  font-size: 1rem;
+}
+
+body {
+  padding-top: 1rem;
+  font-family: "Montserrat", arial, sans-serif;
+}
+
+body .slider-container {
+  padding: 1.625rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 23.75rem;
+  margin-left: 2rem;
+}
+
+body .slider-container .slider-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15.625rem;
+  padding: 0;
+  margin: 0;
+}
+
+body .slider-container .slider-list .active {
+  -webkit-animation: fadeIn 0.85s ease-in-out;
+          animation: fadeIn 0.85s ease-in-out;
+  display: inherit;
+}
+
+body .slider-container .slider-list .hidden {
+  display: none !important;
+}
+
+body .slider-container .slider-list .slider-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .slider-container .slider-list .slider-slide .picture {
+  max-width: 100%;
+}
+
+body .autor {
+  font-family: "Mali", cursive;
+  margin-top: 4.375rem;
+  display: inline-block;
+}
+
+.slider-controlls .controlls-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.slider-controlls .controlls-list .prev,
+.slider-controlls .controlls-list .next {
+  text-decoration: none;
+  color: black;
+}
+
+.slider-controlls .controlls-list .prev:hover,
+.slider-controlls .controlls-list .next:hover {
+  color: tomato;
+}
+/*# sourceMappingURL=main.css.map */
