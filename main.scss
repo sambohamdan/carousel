@@ -58,7 +58,11 @@ body {
     display: inline-block;
   }
 }
+
 .slider-controlls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   .controlls-list {
     display: flex;
     flex-direction: row;
@@ -69,10 +73,38 @@ body {
     .next {
       text-decoration: none;
       color: black;
-      &:hover{
+      &:hover {
         color: tomato;
       }
     }
-
   }
 }
+@media screen and (max-width: 1024px){
+  .slider-container {
+    display: flex;
+    margin: 0 auto !important;
+    padding: 0;
+    max-width: 70% !important;
+    .slider-list {
+      width: 80%;
+      .slider-slide {
+        flex-direction: column !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .slider-container { 
+    .slider-list {
+      width: 80%;
+      margin: 0 auto !important;
+      .slider-slide {
+        flex-direction: column !important;
+      }
+    }
+  }
+}
+
+
+
+

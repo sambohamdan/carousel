@@ -81,6 +81,12 @@ body .autor {
   display: inline-block;
 }
 
+.slider-controlls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .slider-controlls .controlls-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,5 +113,38 @@ body .autor {
 .slider-controlls .controlls-list .prev:hover,
 .slider-controlls .controlls-list .next:hover {
   color: tomato;
+}
+
+@media screen and (max-width: 1024px) {
+  .slider-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto !important;
+    padding: 0;
+    max-width: 70% !important;
+  }
+  .slider-container .slider-list {
+    width: 80%;
+  }
+  .slider-container .slider-list .slider-slide {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .slider-container .slider-list {
+    width: 80%;
+    margin: 0 auto !important;
+  }
+  .slider-container .slider-list .slider-slide {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
